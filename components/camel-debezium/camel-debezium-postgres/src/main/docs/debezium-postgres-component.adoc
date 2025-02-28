@@ -110,7 +110,7 @@ If you choose not to convert your body to `Map`, you can obtain the schema infor
 
 [source,java]
 ----
-from("debezium-postgres:[name]?[options]])
+from("debezium-postgres:[name]?[options]")
     .process(exchange -> {
         final Struct bodyValue = exchange.getIn().getBody(Struct.class);
         final Schema schemaValue = bodyValue.schema();
